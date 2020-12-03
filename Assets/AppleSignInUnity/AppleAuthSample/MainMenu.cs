@@ -188,7 +188,7 @@ public class MainMenu : MonoBehaviour
     
     private void SignInWithApple()
     {
-        var loginArgs = new AppleAuthLoginArgs(LoginOptions.IncludeEmail | LoginOptions.IncludeFullName);
+        var loginArgs = new AppleAuthLoginArgs(LoginOptions.IncludeEmail & LoginOptions.IncludeFullName);
         
         this._appleAuthManager.LoginWithAppleId(
             loginArgs,
